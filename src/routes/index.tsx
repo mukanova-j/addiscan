@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Section } from "@/components/Section";
 import { ScreenshotPlaceholder } from "@/components/ScreenshotPlaceholder";
+import architectureAsset from "@/assets/architecture_design.svg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -207,7 +208,16 @@ function Index() {
           Framework Core. The frontend runs on Blazor Server and communicates with the backend only
           through HTTP calls, which keeps the design ready for a future mobile client.
         </p>
-        <ScreenshotPlaceholder label="Diagram placeholder. System architecture diagram." />
+        <figure className="surface-panel overflow-hidden p-6">
+          <img
+            src={architectureAsset.url}
+            alt="System architecture diagram showing Web server, API server, OCR pipeline, database, and client flow"
+            className="w-full"
+          />
+          <figcaption className="mt-4 text-center text-sm text-muted-foreground">
+            System architecture diagram
+          </figcaption>
+        </figure>
       </Section>
 
       <Section
