@@ -3,6 +3,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 import { Section } from "@/components/Section";
 import { ScreenshotPlaceholder } from "@/components/ScreenshotPlaceholder";
 import architectureAsset from "@/assets/architecture_design.svg.asset.json";
+import demoVideoAsset from "@/assets/demo-video.mp4.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -157,10 +158,20 @@ function Index() {
             </article>
           ))}
         </div>
-        <div className="grid gap-5 md:grid-cols-2">
-          <ScreenshotPlaceholder label="Screenshot placeholder. Upload screen." />
-          <ScreenshotPlaceholder label="Screenshot placeholder. Results screen." />
-        </div>
+        <figure className="surface-panel overflow-hidden p-6">
+          <video
+            src={demoVideoAsset.url}
+            controls
+            muted
+            playsInline
+            preload="metadata"
+            className="w-full rounded-lg"
+            aria-label="AddiScan demo video showing upload and results screens"
+          />
+          <figcaption className="mt-4 text-center text-sm text-muted-foreground">
+            Demo video showing the upload and results flow
+          </figcaption>
+        </figure>
       </Section>
 
       <Section
