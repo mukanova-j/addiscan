@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Section } from "@/components/Section";
-import { ScreenshotPlaceholder } from "@/components/ScreenshotPlaceholder";
 import architectureAsset from "@/assets/architecture_design.svg.asset.json";
 import demoVideoAsset from "@/assets/demo-video.mp4.asset.json";
 import gradedResultAsset from "@/assets/graded-additive-result.png.asset.json";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -283,10 +283,10 @@ function Index() {
             </li>
           ))}
         </ul>
-        <ScreenshotPlaceholder label="Screenshot placeholder. Test suite run or demo recording thumbnail." />
       </Section>
 
       <footer className="border-t border-border" style={{ background: "var(--gradient-hero)" }}>
+
         <div className="mx-auto w-full max-w-5xl px-6 py-24">
           <p className="font-display text-xs font-semibold tracking-[0.22em] text-primary-foreground/70 uppercase">
             08 Closing
