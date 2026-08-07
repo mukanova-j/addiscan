@@ -36,20 +36,20 @@ const navItems = [
 
 const features = [
   {
-    title: "Image upload and OCR",
-    body: "A user uploads a photograph of a product label and the service extracts the printed text with Tesseract.NET.",
+    title: "Upload via Web Server",
+    body: "A user submits a food label image through the Web server.",
   },
   {
-    title: "Additive detection",
-    body: "The detection layer matches extracted text against a curated risk database by name, by synonym, and by E number.",
+    title: "Send Request to API",
+    body: "The Web server forwards the upload to the API server over HTTP.",
   },
   {
-    title: "Results interface",
-    body: "The interface returns a plain language report and an overall risk rating for the scanned product.",
+    title: "Extract and Match",
+    body: "The API server uses OCR to extract ingredient text and matches additives against a curated database.",
   },
   {
-    title: "Authentication and history",
-    body: "A registered user signs in and saves scan history for later review.",
+    title: "Score and Return Report",
+    body: "Grading logic scores each match, then the API server returns a plain language report to the Web server for display.",
   },
 ];
 
@@ -124,17 +124,17 @@ function Index() {
           <article className="surface-panel p-6">
             <p className="eyebrow">Evidence</p>
             <p className="mt-3 leading-relaxed text-foreground">
-              A randomized, double blind, placebo controlled trial published in The Lancet found a
-              statistically significant increase in hyperactivity among children who consumed drinks
-              containing artificial food colors and sodium benzoate.
+              Cowburn and Stockley’s (2005) systematic review in Public Health Nutrition found
+              consumers face significant barriers to understanding nutrition labelling, with
+              challenges in lower literacy populations.
             </p>
           </article>
           <article className="surface-panel p-6">
             <p className="eyebrow">Evidence</p>
             <p className="mt-3 leading-relaxed text-foreground">
-              A systematic review in Public Health Nutrition found that consumers struggle to locate
-              and interpret technical ingredient language, and that comprehension drops further among
-              lower literacy and lower income populations.
+              The 2007 Lancet study by McCann et al. linked artificial food colors and sodium
+              benzoate to increased hyperactivity in children in a double-blind, placebo-controlled
+              study.
             </p>
           </article>
         </div>
