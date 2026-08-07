@@ -4,6 +4,7 @@ import { Section } from "@/components/Section";
 import { ScreenshotPlaceholder } from "@/components/ScreenshotPlaceholder";
 import architectureAsset from "@/assets/architecture_design.svg.asset.json";
 import demoVideoAsset from "@/assets/demo-video.mp4.asset.json";
+import gradedResultAsset from "@/assets/graded-additive-result.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -199,7 +200,16 @@ function Index() {
           opinions. Each additive receives a final score from zero to five, and the system maps that
           score to a named risk band.
         </p>
-        <ScreenshotPlaceholder label="Screenshot placeholder. Graded additive result." />
+        <figure className="surface-panel overflow-hidden p-6">
+          <img
+            src={gradedResultAsset.url}
+            alt="AddiScan graded additive result page for Brilliant Blue FCF showing safety criteria and final score"
+            className="w-full rounded-lg"
+          />
+          <figcaption className="mt-4 text-center text-sm text-muted-foreground">
+            Graded additive result for Brilliant Blue FCF (E133)
+          </figcaption>
+        </figure>
       </Section>
 
       <Section id="architecture" index="05" eyebrow="Section" title="Architecture">
