@@ -24,11 +24,11 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Install dependencies
-      run: npm ci
+      run: npm install
 
     - name: Ensure webpack-cli is installed
       run: npm install --no-audit --no-fund --no-progress --save-dev webpack-cli
 
     - name: Build
-      run: npx webpack --mode production
+      run: npx --yes webpack --mode production
  
