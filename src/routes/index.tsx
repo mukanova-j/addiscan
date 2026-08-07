@@ -303,18 +303,33 @@ function Index() {
           </p>
           <div className="mt-8 grid gap-3 sm:grid-cols-3">
             {[
-              { icon: Github, label: "GitHub repository", value: "Add repository link" },
-              { icon: Linkedin, label: "LinkedIn profile", value: "Add profile link" },
-              { icon: Mail, label: "Email", value: "Add contact address" },
+              {
+                icon: Github,
+                label: "GitHub repository",
+                href: "https://github.com/mukanova-j/addiscan/tree/main",
+              },
+              {
+                icon: Linkedin,
+                label: "LinkedIn profile",
+                href: "https://www.linkedin.com/in/zhanel-mukanova/",
+              },
+              {
+                icon: Mail,
+                label: "Email",
+                href: "mailto:j.mukanova@icloud.com",
+              },
             ].map((item) => (
-              <div
+              <a
                 key={item.label}
-                className="rounded-lg border border-primary-foreground/25 p-5"
+                href={item.href}
+                target={item.href.startsWith("mailto") ? undefined : "_blank"}
+                rel={item.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
+                className="rounded-lg border border-primary-foreground/25 p-5 transition-colors hover:bg-primary-foreground/10"
               >
                 <item.icon className="size-5 text-primary-foreground/80" aria-hidden="true" />
                 <p className="mt-3 text-sm font-medium text-primary-foreground">{item.label}</p>
-                <p className="mt-1 text-sm text-primary-foreground/60">{item.value}</p>
-              </div>
+                <p className="mt-1 text-sm text-primary-foreground/60">{item.href}</p>
+              </a>
             ))}
           </div>
         </div>
