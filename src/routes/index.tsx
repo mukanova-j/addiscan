@@ -202,14 +202,14 @@ function Index() {
         </p>
         <figure className="surface-panel overflow-hidden p-6">
           <img
-            src={gradedResultAsset.url}
+            src="/graded-additive-result.png"
             alt="AddiScan graded additive result page for Brilliant Blue FCF showing safety criteria and final score"
             className="w-full rounded-lg"
           />
           <figcaption className="mt-4 text-center text-sm text-muted-foreground">
             Graded additive result for Brilliant Blue FCF (E133)
           </figcaption>
-        </figure>
+      </figure>
       </Section>
 
       <Section id="architecture" index="05" eyebrow="Section" title="Architecture">
@@ -231,14 +231,14 @@ function Index() {
         </p>
         <figure className="surface-panel overflow-hidden p-6">
           <img
-            src={architectureAsset.url}
+            src="/architecture_design.svg"
             alt="System architecture diagram showing Web server, API server, OCR pipeline, database, and client flow"
             className="w-full"
           />
           <figcaption className="mt-4 text-center text-sm text-muted-foreground">
             System architecture diagram
           </figcaption>
-        </figure>
+      </figure>
       </Section>
 
       <Section
