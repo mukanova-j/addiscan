@@ -162,7 +162,7 @@ function Index() {
         <figure className="surface-panel overflow-hidden p-6">
           <div className="relative w-full pb-[56.25%] rounded-lg overflow-hidden">
             <iframe
-              src="https://youtu.be/_VfK7L18zCE"
+              src="https://youtube.com/embed/_VfK7L18zCE?rel=0"
               className="absolute top-0 left-0 h-full w-full"
               title="AddiScan demo video showing upload and results screens"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
