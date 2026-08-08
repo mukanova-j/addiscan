@@ -38,13 +38,16 @@ jobs:
         env:
           NODE_ENV: production
 
+      - name: Generate index.html
+        run: node scripts/generate-index-html.js dist/client
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./dist/client
 
       - name: Deploy to GitHub Pages
         id: deployment
