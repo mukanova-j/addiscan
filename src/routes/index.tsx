@@ -160,19 +160,19 @@ function Index() {
           ))}
         </div>
         <figure className="surface-panel overflow-hidden p-6">
-          <video
-            src={demoVideoAsset.url}
-            controls
-            muted
-            playsInline
-            preload="metadata"
-            className="w-full rounded-lg"
-            aria-label="AddiScan demo video showing upload and results screens"
-          />
+          <div className="relative w-full pb-[56.25%] rounded-lg overflow-hidden">
+            <iframe
+              src="https://youtu.be/_VfK7L18zCE"
+              className="absolute top-0 left-0 h-full w-full"
+              title="AddiScan demo video showing upload and results screens"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
           <figcaption className="mt-4 text-center text-sm text-muted-foreground">
             Demo video showing the upload and results flow
           </figcaption>
-        </figure>
+      </figure>
       </Section>
 
       <Section
