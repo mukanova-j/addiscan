@@ -18,5 +18,9 @@ export default defineConfig({
       crawlLinks: true,
     },
   },
+  nitro: {
+    preset: "node-server",
+  },
 });
+
 
