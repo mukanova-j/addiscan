@@ -1,12 +1,12 @@
 import { writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { pathToFileURL } from "node:url";
 
 const outputDir = process.argv[2] ?? "dist/client";
 const basePath = process.argv[3] ?? "/addiscan/";
 
-const ssrPath = new URL(
-  "node_modules/.nitro/vite/services/ssr/index.js",
-  "file://" + process.cwd() + "/"
+const ssrPath = pathToFileURL(
+  join(process.cwd(), "node_modules/.nitro/vite/services/ssr/index.js")
 ).href;
 
 const ssrModule = await import(ssrPath);
