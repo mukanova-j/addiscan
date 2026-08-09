@@ -53,13 +53,34 @@ const features = [
 ];
 
 const criteria = [
-  "Carcinogenicity",
-  "Ban status",
-  "Allergic and sensitivity reactions",
-  "Cumulative exposure risk",
-  "Synthetic or natural origin",
-  "Effect on children and vulnerable groups",
-  "Functional necessity",
+  {
+    title: "Carcinogenicity",
+    body: "Maximum 4 points, anchored to the IARC group of the additive.",
+  },
+  {
+    title: "Ban status",
+    body: "Maximum 3 points, counting outright bans in sovereign countries or major regulatory blocs.",
+  },
+  {
+    title: "Allergic and sensitivity reactions",
+    body: "Maximum 2 points, separating reactions in sensitive individuals from reactions in the general population.",
+  },
+  {
+    title: "Cumulative and long term exposure risk",
+    body: "Maximum 2 points, judged against real dietary patterns and ADI exceedances.",
+  },
+  {
+    title: "Origin",
+    body: "Maximum 1 point, where fully synthetic sources score higher than natural or biologically derived ones.",
+  },
+  {
+    title: "Effect on children and vulnerable groups",
+    body: "Maximum 2 points, for harm beyond the general adult population.",
+  },
+  {
+    title: "Functional necessity",
+    body: "A modifier from minus 1 to plus 1. This is the only criterion that can lower a score. A critical safety function, such as preventing botulism, earns minus 1. A purely cosmetic role earns plus 1.",
+  },
 ];
 
 const stack = [
