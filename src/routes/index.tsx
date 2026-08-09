@@ -92,7 +92,7 @@ function Index() {
       <header className="relative overflow-hidden" style={{ background: "var(--gradient-hero)" }}>
         <div className="mx-auto w-full max-w-5xl px-6 py-24 md:py-32">
           <p className="font-display text-xs font-semibold tracking-[0.22em] text-primary-foreground/70 uppercase">
-            Zhanel Mukanova. (2026). A Capstone Project Report of MSIT 5910. 
+            Zhanel Mukanova. (2026). MSIT 5910-01 MSIT Capstone Project.
           </p>
           <h1 className="mt-6 text-5xl font-semibold text-primary-foreground md:text-7xl">
             AddiScan
