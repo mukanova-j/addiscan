@@ -53,13 +53,34 @@ const features = [
 ];
 
 const criteria = [
-  "Carcinogenicity",
-  "Ban status",
-  "Allergic and sensitivity reactions",
-  "Cumulative exposure risk",
-  "Synthetic or natural origin",
-  "Effect on children and vulnerable groups",
-  "Functional necessity",
+  {
+    title: "Carcinogenicity",
+    body: "Maximum 4 points, anchored to the IARC group of the additive.",
+  },
+  {
+    title: "Ban status",
+    body: "Maximum 3 points, counting outright bans in sovereign countries or major regulatory blocs.",
+  },
+  {
+    title: "Allergic and sensitivity reactions",
+    body: "Maximum 2 points, separating reactions in sensitive individuals from reactions in the general population.",
+  },
+  {
+    title: "Cumulative and long term exposure risk",
+    body: "Maximum 2 points, judged against real dietary patterns and ADI exceedances.",
+  },
+  {
+    title: "Origin",
+    body: "Maximum 1 point, where fully synthetic sources score higher than natural or biologically derived ones.",
+  },
+  {
+    title: "Effect on children and vulnerable groups",
+    body: "Maximum 2 points, for harm beyond the general adult population.",
+  },
+  {
+    title: "Functional necessity",
+    body: "A modifier from minus 1 to plus 1. This is the only criterion that can lower a score. A critical safety function, such as preventing botulism, earns minus 1. A purely cosmetic role earns plus 1.",
+  },
 ];
 
 const stack = [
@@ -109,6 +130,8 @@ function Index() {
 
       <Section
         id="problem"
+        index="01"
+        eyebrow="The gap"
         title="The problem"
         tone="tinted"
       >
@@ -137,7 +160,7 @@ function Index() {
         </div>
       </Section>
 
-      <Section id="solution" title="The solution">
+      <Section id="solution" index="02" eyebrow="How it works" title="The solution">
         <p className="max-w-3xl text-lg leading-relaxed text-foreground">
           AddiScan delivers four core features that move a user from a label photograph to a readable
           risk report.
@@ -171,6 +194,8 @@ function Index() {
 
       <Section
         id="grading"
+        index="03"
+        eyebrow="Risk scoring"
         title="The grading system"
         tone="tinted"
       >
@@ -179,11 +204,16 @@ function Index() {
         </p>
         <div className="surface-panel divide-y divide-border">
           {criteria.map((item, i) => (
-            <div key={item} className="flex items-center gap-4 px-6 py-4">
-              <span className="font-display text-sm font-semibold text-primary">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <span className="text-foreground">{item}</span>
+            <div key={item.title} className="px-6 py-4">
+              <div className="flex items-start gap-4">
+                <span className="font-display text-sm font-semibold text-primary pt-0.5">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div className="flex-1">
+                  <h3 className="font-semibold text-foreground">{item.title}</h3>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">{item.body}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -204,7 +234,7 @@ function Index() {
       </figure>
       </Section>
 
-      <Section id="architecture" title="Architecture">
+      <Section id="architecture" index="04" eyebrow="System design" title="Architecture">
         <p className="max-w-3xl text-lg leading-relaxed text-foreground">
           The system separates the backend and frontend into distinct layers.
         </p>
@@ -235,6 +265,8 @@ function Index() {
 
       <Section
         id="security"
+        index="05"
+        eyebrow="Trust"
         title="Security and ethics"
         tone="tinted"
       >
@@ -257,7 +289,7 @@ function Index() {
         </p>
       </Section>
 
-      <Section id="results" title="Results and status">
+      <Section id="results" index="06" eyebrow="Current state" title="Results and status">
         <p className="max-w-3xl text-lg leading-relaxed text-foreground">
           The build reaches a working end to end state.
         </p>
