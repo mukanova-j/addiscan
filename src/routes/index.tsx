@@ -1,10 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Section } from "@/components/Section";
-import demoVideoAsset from "@/assets/demo-video.mp4.asset.json";
-
-
-
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -96,7 +92,7 @@ function Index() {
       <header className="relative overflow-hidden" style={{ background: "var(--gradient-hero)" }}>
         <div className="mx-auto w-full max-w-5xl px-6 py-24 md:py-32">
           <p className="font-display text-xs font-semibold tracking-[0.22em] text-primary-foreground/70 uppercase">
-            Capstone Project
+            Zhanel Mukanova. (2026). A Capstone Project Report of MSIT 5910. 
           </p>
           <h1 className="mt-6 text-5xl font-semibold text-primary-foreground md:text-7xl">
             AddiScan
