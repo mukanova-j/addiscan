@@ -194,6 +194,8 @@ function Index() {
 
       <Section
         id="grading"
+        index="03"
+        eyebrow="Risk scoring"
         title="The grading system"
         tone="tinted"
       >
@@ -202,11 +204,16 @@ function Index() {
         </p>
         <div className="surface-panel divide-y divide-border">
           {criteria.map((item, i) => (
-            <div key={item} className="flex items-center gap-4 px-6 py-4">
-              <span className="font-display text-sm font-semibold text-primary">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <span className="text-foreground">{item}</span>
+            <div key={item.title} className="px-6 py-4">
+              <div className="flex items-start gap-4">
+                <span className="font-display text-sm font-semibold text-primary pt-0.5">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div className="flex-1">
+                  <h3 className="font-semibold text-foreground">{item.title}</h3>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">{item.body}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -227,7 +234,7 @@ function Index() {
       </figure>
       </Section>
 
-      <Section id="architecture" title="Architecture">
+      <Section id="architecture" index="04" eyebrow="System design" title="Architecture">
         <p className="max-w-3xl text-lg leading-relaxed text-foreground">
           The system separates the backend and frontend into distinct layers.
         </p>
@@ -258,6 +265,8 @@ function Index() {
 
       <Section
         id="security"
+        index="05"
+        eyebrow="Trust"
         title="Security and ethics"
         tone="tinted"
       >
@@ -280,7 +289,7 @@ function Index() {
         </p>
       </Section>
 
-      <Section id="results" title="Results and status">
+      <Section id="results" index="06" eyebrow="Current state" title="Results and status">
         <p className="max-w-3xl text-lg leading-relaxed text-foreground">
           The build reaches a working end to end state.
         </p>
