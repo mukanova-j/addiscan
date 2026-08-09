@@ -231,7 +231,7 @@ function Index() {
         </p>
         <figure className="surface-panel overflow-hidden p-6">
           <img
-            src="/architecture_design.svg"
+            src={`${import.meta.env.BASE_URL}architecture_design.svg`}
             alt="System architecture diagram showing Web server, API server, OCR pipeline, database, and client flow"
             className="w-full"
           />
