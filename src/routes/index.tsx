@@ -130,6 +130,8 @@ function Index() {
 
       <Section
         id="problem"
+        index="01"
+        eyebrow="The gap"
         title="The problem"
         tone="tinted"
       >
@@ -158,7 +160,7 @@ function Index() {
         </div>
       </Section>
 
-      <Section id="solution" title="The solution">
+      <Section id="solution" index="02" eyebrow="How it works" title="The solution">
         <p className="max-w-3xl text-lg leading-relaxed text-foreground">
           AddiScan delivers four core features that move a user from a label photograph to a readable
           risk report.
