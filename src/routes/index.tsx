@@ -130,8 +130,6 @@ function Index() {
 
       <Section
         id="problem"
-        index="01"
-        eyebrow="The gap"
         title="The problem"
         tone="tinted"
       >
@@ -160,7 +158,7 @@ function Index() {
         </div>
       </Section>
 
-      <Section id="solution" index="02" eyebrow="How it works" title="The solution">
+      <Section id="solution" title="The solution">
         <p className="max-w-3xl text-lg leading-relaxed text-foreground">
           AddiScan delivers four core features that move a user from a label photograph to a readable
           risk report.
@@ -194,8 +192,6 @@ function Index() {
 
       <Section
         id="grading"
-        index="03"
-        eyebrow="Risk scoring"
         title="The grading system"
         tone="tinted"
       >
@@ -234,7 +230,7 @@ function Index() {
       </figure>
       </Section>
 
-      <Section id="architecture" index="04" eyebrow="System design" title="Architecture">
+      <Section id="architecture" title="Architecture">
         <p className="max-w-3xl text-lg leading-relaxed text-foreground">
           The system separates the backend and frontend into distinct layers.
         </p>
@@ -265,8 +261,6 @@ function Index() {
 
       <Section
         id="security"
-        index="05"
-        eyebrow="Trust"
         title="Security and ethics"
         tone="tinted"
       >
@@ -289,7 +283,7 @@ function Index() {
         </p>
       </Section>
 
-      <Section id="results" index="06" eyebrow="Current state" title="Results and status">
+      <Section id="results" title="Results and status">
         <p className="max-w-3xl text-lg leading-relaxed text-foreground">
           The build reaches a working end to end state.
         </p>
