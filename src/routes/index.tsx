@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Section } from "@/components/Section";
-import architectureAsset from "@/assets/architecture_design.svg.asset.json";
 import demoVideoAsset from "@/assets/demo-video.mp4.asset.json";
-import gradedResultAsset from "@/assets/graded-additive-result.png.asset.json";
+
+
 
 
 export const Route = createFileRoute("/")({
