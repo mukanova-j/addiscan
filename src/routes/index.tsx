@@ -267,7 +267,7 @@ function Index() {
         </p>
       </Section>
 
-      <Section id="results" index="07" eyebrow="Section" title="Results and status">
+      <Section id="results" title="Results and status">
         <p className="max-w-3xl text-lg leading-relaxed text-foreground">
           The build reaches a working end to end state.
         </p>
@@ -288,9 +288,6 @@ function Index() {
       <footer className="border-t border-border" style={{ background: "var(--gradient-hero)" }}>
 
         <div className="mx-auto w-full max-w-5xl px-6 py-24">
-          <p className="font-display text-xs font-semibold tracking-[0.22em] text-primary-foreground/70 uppercase">
-            08 Closing
-          </p>
           <h2 className="mt-5 text-4xl font-semibold text-primary-foreground md:text-5xl">
             AddiScan
           </h2>
